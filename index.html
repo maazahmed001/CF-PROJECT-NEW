@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+  </head>
+  <body>
+    <nav class="navbar">
+        <div class="navdiv">
+            <div class="logo"><a href="#">FLYK</a></div>
+            <ul>
+                <li><a href="#" id="bookButton">BOOK</a></li>
+                <li><a href="#" id="packagesButton">PACKAGES</a></li>
+                <li><a href="#" id="loungesButton">LOUNGES</a></li>
+                <li><a href="#" id="discountButton">DISCOUNT</a></li>
+                
+                <li><a href="#" id="helpButton">HELP</a></li>
+                
+                <button><a href="C:\Users\maazt\OneDrive\Desktop\ticket.html\login.html" target="_blank">LOG IN</a></button>
+                
+            </ul>
+        </div>
+    </nav>
+   <div class="content-container">
+
+    <div class="backgroundumrah">
+    <div class="slideshow-container2">
+      <div class="mySlides2">
+          <img class="slideshow-image2" src="https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+          <div class="text2">UMRAH PACKAGE</div>
+          <button class="custom-centered-button" onclick="buttonClick()">PACKAGES</button>
+      </div>
+
+      <div class="mySlides2">
+          <img class="slideshow-image2" src="https://images.unsplash.com/photo-1676200928665-8b97df7ab979?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+          <div class="text2">HAJJ PACKAGE</div>
+          <button class="custom-centered-button" onclick="buttonClick()">PACKAGES</button>
+      </div>
+
+      <div class="mySlides2">
+          <img class="slideshow-image2" src="https://images.unsplash.com/photo-1633174754673-95dd2842f8fc?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+          <div class="text2">RAMADAN DISCOUNTS</div>
+          <button class="custom-centered-button" onclick="buttonClick()">PACKAGES</button>
+      </div>
+      <div style="text-align:center">
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+        <span class="dot2"></span>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+
+    <div class="search-box" id="searchBox">
+        <label for="departure">Departure Airport:</label>
+        <select id="departure" name="departure">
+          <!-- Add options for departure airports -->
+          <option value="JFK">John F. Kennedy International Airport</option>
+          <option value="LAX">Los Angeles International Airport</option>
+          <option value="LHR">Heathrow Airport - London, United Kingdom</option>
+         <option value="DXB">Dubai International Airport - Dubai, United Arab Emirates</option>
+         <option value="ICN">Incheon International Airport - Seoul, South Korea</option>
+         <option value="FRA">Frankfurt Airport - Frankfurt, Germany</option>
+         <option value="SIN">Changi Airport - Singapore</option>
+         <option value="HKG">Hong Kong International Airport - Hong Kong</option>
+         <option value="AMS">Amsterdam Schiphol Airport - Amsterdam, Netherlands</option>
+         <option value="CDG">Charles de Gaulle Airport - Paris, France</option>
+         <option value="PEK">Beijing Capital International Airport - Beijing, China</option>
+         <option value="BKK">Suvarnabhumi Airport - Bangkok, Thailand</option>
+         <option value="ORD">O'Hare International Airport - Chicago, United States</option>
+         <option value="NRT">Narita International Airport - Tokyo, Japan</option>
+         <option value="ATL">Hartsfield-Jackson Atlanta International Airport - Atlanta, United States</option>
+         <option value="SYD">Sydney Airport - Sydney, Australia</option>
+          <!-- Add more options as needed -->
+        </select>
+      
+        <label for="arrival">Arrival Airport:</label>
+        <select id="arrival" name="arrival">
+          <!-- Add options for arrival airports -->
+          <option value="ORD">Chicago O'Hare International Airport</option>
+          <option value="DFW">Dallas/Fort Worth International Airport</option>
+          <option value="SYD">Sydney Airport - Sydney, Australia</option>
+          <option value="MUC">Munich Airport - Munich, Germany</option>
+          <option value="IST">Istanbul Airport - Istanbul, Turkey</option>
+          <option value="DEL">Indira Gandhi International Airport - Delhi, India</option>
+          <option value="CAN">Guangzhou Baiyun International Airport - Guangzhou, China</option>
+          <option value="MEX">Mexico City International Airport - Mexico City, Mexico</option>
+          <option value="DOH">Hamad International Airport - Doha, Qatar</option>
+          <option value="MIA">Miami International Airport - Miami, United States</option>
+          <option value="JNB">O.R. Tambo International Airport - Johannesburg, South Africa</option>
+          <option value="YYZ">Toronto Pearson International Airport - Toronto, Canada</option>
+          <option value="SVO">Sheremetyevo International Airport - Moscow, Russia</option>
+          <option value="ICN">Incheon International Airport - Seoul, South Korea</option>
+          <option value="BCN">Barcelona-El Prat Airport - Barcelona, Spain</option>
+          <option value="DXB">Dubai International Airport - Dubai, United Arab Emirates</option>
+          <option value="ZRH">Zurich Airport - Zurich, Switzerland</option>
+          <option value="ATH">Athens International Airport - Athens, Greece</option>
+          <!-- Add more options as needed -->
+        </select>
+      
+        <label for="passengers">Passengers:</label>
+        <input type="number" id="passengers" name="passengers" min="1" value="1">
+      
+        <label for="date">Departure Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="class">Class:</label>
+        <select id="class" name="class">
+          <option value="economy">Economy</option>
+          <option value="business">Business</option>
+          <option value="first">First Class</option>
+        </select>
+      
+        <button onclick="searchFlights()">Search Flights</button>
+    </div>
+
+
+
+    <div class="hamzascards" id="hamzascardsSection">
+    <div class="card">
+        <h2>Venice - City of Canals</h2>
+        <img src="https://th.bing.com/th/id/R.a43605f1b1b8fbb4ae3f5a9351f28901?rik=ppRLbSBJOs8k2A&riu=http%3a%2f%2fthewowstyle.com%2fwp-content%2fuploads%2f2015%2f02%2f131216venice-italy-677483.jpg&ehk=nwejicY3%2fJO7V8%2faIJOiLE2uqUj7rlJI2E4qPjJvuFs%3d&risl=&pid=ImgRaw&r=0" alt="Venice">
+        <p>
+          Explore the charm of Venice with our exclusive travel package. Discover enchanting canals, historic landmarks, and savor authentic Italian cuisine. Join us for a captivating and memorable journey. This package includes:
+        </p>
+        <button onclick="togglePackageInfo()">View Details</button>
+        <div id="package-info" style="display: none;">
+            <ul>
+            <li>Round-trip flights</li>
+            <li>Accommodation in a canal-side hotel</li>
+            <li>Guided tours of famous attractions</li>
+            <li>Gondola ride experience</li>
+            </ul>
+        </div>
+    </div>
+    <div class="card2">
+      <h2>UAE - Luxurious Air</h2>
+      <img src="https://wallpaperset.com/w/full/d/3/f/509603.jpg" alt="Venice">
+      <p>
+          
+        Discover the UAE's diverse wonders with our exclusive package. From Dubai's modern splendor to Abu Dhabi's cultural richness, explore iconic landmarks and indulge in Arabian hospitality. This package includes:
+      </p>
+      <button onclick="togglePackageInfo2()">View Details</button>
+      <div id="package-info2" style="display: none;">
+          
+          <ul>
+           <li>Round-trip flights</li>
+           <li>Accommodation in Burj-ul-Arab</li>
+           <li>Guided tours of famous attractions</li>
+           <li>Jumping high experience</li>
+          </ul>
+      </div>
+    </div>
+    <div class="card3">
+      <h2>Bangkok - City of Angeles </h2>
+      <img src="https://wallpapercave.com/wp/wp1916916.jpg" alt="Dubai">
+      <p>
+          Discover the charm of DUBAI with another exclusive travel package.
+          Explore the enchanting canals, visit historic landmarks, and indulge
+          in authentic Arabian cuisine. This package includes:
+      </p>
+      <ul>
+          <!-- Add list items as needed -->
+      </ul>
+      <button onclick="togglePackageInfo3()">View Details</button>
+      <div id="package-info3" style="display: none;">
+          
+          <ul>
+              <li>Round-trip flights</li>
+              <li>Accommodation in Sunny Inn</li>
+              <li>Guided tours of famous attractions</li>
+              <li>Light Alley experience</li>
+          </ul>
+      </div>
+   </div>
+   <div class="card4">
+    <h2>Paris - The City of Lights</h2>
+    <img src="https://th.bing.com/th/id/R.78435107cc5f4d7ec8b4449a8ccbf639?rik=WXEYWGQ2XXA1OA&pid=ImgRaw&r=0" alt="Paris">
+    <p>
+      Explore Paris with our exclusive package: iconic landmarks, delicious French cuisine, and a romantic atmosphere. Uncover the charm of the City of Love in style. This package includes:
+    </p>
+    
+        
+    
+    <button onclick="togglePackageInfo4()">View Details</button>
+    <div id="package-info4" style="display: none;">
+      <ul>
+      <li>Round-trip flights</li>
+      <li>Accommodation in a centrally located hotel</li>
+      <li>Guided tours of famous attractions</li>
+      <li>Cruise along the Seine River</li>
+      </ul>
+    </div>
+   </div>
+ </div>
+    
+
+ <div class="businesslounges" id="businessloungesSection"> 
+    <div class="buscard">
+      <h2>Business Lounge Booking</h2>
+      <p>Enhance your travel experience with our exclusive Business Lounge.</p>
+      <button onclick="toggleBookingForm()">Book Business Lounge</button>
+      <form id="bookingForm" style="display: none;">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="flightNumber">Flight Number:</label>
+          <input type="text" id="flightNumber" name="flightNumber" required>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+          <button type="submit">Submit Booking</button>
+      </form>
+   </div>
+  </div>
+ 
+   <div class="circles">
+     <div class="circular-image">
+       <img src="https://th.bing.com/th/id/OIP.HFhyYn0-6-a49i0p6TX8ZgHaE7?rs=1&pid=ImgDetMain" alt="Image 1">
+     </div>
+     <div class="circular-image2">
+       <img src="https://th.bing.com/th/id/OIP.MyWAgu6N1oKuG-CqqSnSnwHaFj?rs=1&pid=ImgDetMain" alt="Image 2">
+     </div>
+     <div class="circular-image3">
+      <img src="https://th.bing.com/th/id/OIP.1vOxbccrZZttCgU0KDnPBAAAAA?w=474&h=316&rs=1&pid=ImgDetMain" alt="Image 3">
+     </div>
+   </div> 
+  
+   <div class="circles2">
+      <div class="circular-image11">
+        <img src="https://th.bing.com/th/id/OIP.6Dnz-8C7CmuYfoy75p-PSgHaE8?rs=1&pid=ImgDetMain" alt="Image 11">
+      </div>
+      <div class="circular-image22">
+        <img src="https://thepointsguy.global.ssl.fastly.net/us/originals/2020/11/AA-Flagship-Lounge-JFK-Benji-Stawski-4.jpeg?width=640" alt="Image 22">
+      </div>
+   </div>
+   
+
+   <div class="backgroundstu" id="backgroundstuSection">
+   <div class="slideshow-container">
+    <div class="mySlides">
+        <img class="slideshow-image" src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 1">
+        <div class="text">GET STUDENT DISCOUNT</div>
+        <button class="centered-button" onclick="buttonClick()">GET DISCOUNT</button>
+    </div>
+    
+    <div class="mySlides">
+        <img class="slideshow-image" src="https://plus.unsplash.com/premium_photo-1680807869379-bc4ede4d5396?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 2">
+        <div class="text">GET STUDENT DISCOUNT</div>
+        <button class="centered-button" onclick="buttonClick()">GET DISCOUNT</button>
+    </div>
+    
+    <div class="mySlides">
+        <img class="slideshow-image" src="https://images.unsplash.com/photo-1484712401471-05c7215830eb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Slide 3">
+        <div class="text">GET STUDENT DISCOUNT</div>
+        <button class="centered-button" onclick="buttonClick()">GET DISCOUNT</button>
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+   </div>
+  </div>
+   </div>
+   
+    
+  
+   <footer class="emirates-footer" id="footerSection">
+    <section class="footer-section">
+      <h4>About Us</h4>
+      <ul>
+        <li>About us</li>
+        <li>Careers</li>
+        <li>Media Centre</li>
+        <li>Our planet</li>
+        <li>Our people</li>
+        <li>Our communities</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Help</h4>
+      <ul>
+        <li>Help and Contact</li>
+        <li>Travel Updates</li>
+        <li>Special Assistance</li>
+        <li>Frequently Asked Questions</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Book</h4>
+      <ul>
+        <li>Book flights</li>
+        <li>Travel services</li>
+        <li>Transportation</li>
+        <li>Planning your trip</li>
+        <li>Search for flights</li>
+        <li>Dubai Experience</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Manage</h4>
+      <ul>
+        <li>Check-in</li>
+        <li>Manage your booking</li>
+        <li>Chauffeur drive</li>
+        <li>Flight status</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Before You Fly</h4>
+      <ul>
+        <li>Baggage</li>
+        <li>Visa and passport information</li>
+        <li>Health</li>
+        <li>Travel information</li>
+        <li>Dubai International</li>
+        <li>To and from the airport</li>
+        <li>Rules and notices</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Where We Fly</h4>
+      <ul>
+        <li>Route map</li>
+        <li>Africa</li>
+        <li>Asia and Pacific</li>
+        <li>Europe</li>
+        <li>The Americas</li>
+        <li>The Middle East</li>
+        <li>Flights to all countries/territories</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Experience</h4>
+      <ul>
+        <li>Cabin features</li>
+        <li>Shop Emirates</li>
+        <li>What's on your flight</li>
+        <li>Inflight entertainment</li>
+        <li>Dining</li>
+        <li>Our lounges</li>
+        <li>Dubai Stopover</li>
+      </ul>
+    </section>
+
+    <section class="footer-section">
+      <h4>Loyalty</h4>
+      <ul>
+        <li>Log in to FLYK Skywards</li>
+        <li>Join FLYK Skywards</li>
+        <li>Our partners</li>
+        <li>Business Rewards benefits</li>
+        <li>Register your company</li>
+        <li>FLYK Skywards Programme Rules</li>
+      </ul>
+    </section>
+  </footer>
+  
+  
+  
+   
+
+</div>
+  </body>
+
+  <script>
+    let slideIndex2 = 0;
+    showSlides2();
+
+    function showSlides2() {
+        let i;
+        const slides2 = document.getElementsByClassName("mySlides2");
+        const dots2 = document.getElementsByClassName("dot2");
+
+        for (i = 0; i < slides2.length; i++) {
+            slides2[i].style.display = "none";
+        }
+
+        slideIndex2++;
+
+        if (slideIndex2 > slides2.length) {
+            slideIndex2 = 1;
+        }
+
+        for (i = 0; i < dots2.length; i++) {
+            dots2[i].className = dots2[i].className.replace(" active2", "");
+        }
+
+        slides2[slideIndex2 - 1].style.display = "block";
+        dots2[slideIndex2 - 1].className += " active2";
+
+        setTimeout(showSlides2, 4000); // Change slide every 2 seconds
+    }
+</script>
+     
+        
+      <script>
+        function searchFlights() {
+          // Get selected values
+          const departureAirport = document.getElementById('departure').value;
+          const arrivalAirport = document.getElementById('arrival').value;
+          const passengers = document.getElementById('passengers').value;
+          const travelClass = document.getElementById('class').value;
+      
+          // Simulated data structure (replace with actual API call)
+          const flightsData = [
+            { departure: 'JFK', arrival: 'ORD', price: 300, class: 'economy' },
+            { departure: 'LAX', arrival: 'DFW', price: 450, class: 'business' },
+            // Add more flight data as needed
+          ];
+      
+          // Filter flights based on user selection
+          const filteredFlights = flightsData.filter(flight =>
+            flight.departure === departureAirport &&
+            flight.arrival === arrivalAirport &&
+            flight.class === travelClass
+          );
+      
+          // Display search results (replace with actual display logic)
+          if (filteredFlights.length > 0) {
+            alert(`Found ${filteredFlights.length} flights. Prices: ${filteredFlights.map(flight => `$${flight.price}`).join(', ')}`);
+          } else {
+            alert('No flights found for the selected criteria.');
+          }
+        }
+      </script>
+      
+      
+      <script>
+        function togglePackageInfo() {
+            var packageInfo = document.getElementById("package-info");
+            if (packageInfo.style.display === "none") {
+                packageInfo.style.display = "block";
+            } else {
+                packageInfo.style.display = "none";
+            }
+        }
+      </script>
+      
+      
+      <script>
+      function togglePackageInfo2() {
+          var packageInfo = document.getElementById("package-info2");
+          if (packageInfo.style.display === "none") {
+              packageInfo.style.display = "block";
+          } else {
+              packageInfo.style.display = "none";
+          }
+      }
+     </script>
+     
+     
+     <script>
+     function togglePackageInfo3() {
+      var packageInfo = document.getElementById("package-info3");
+      if (packageInfo.style.display === "none") {
+          packageInfo.style.display = "block";
+      } else {
+          packageInfo.style.display = "none";
+      }
+      }
+     </script>
+
+<script>
+  function togglePackageInfo4() {
+      var packageInfo = document.getElementById("package-info4");
+      if (packageInfo.style.display === "none") {
+          packageInfo.style.display = "block";
+      } else {
+          packageInfo.style.display = "none";
+      }
+  }
+</script>
+
+<script>
+  function toggleBookingForm() {
+      var bookingForm = document.getElementById("bookingForm");
+      if (bookingForm.style.display === "none") {
+          bookingForm.style.display = "block";
+      } else {
+          bookingForm.style.display = "none";
+      }
+  }
+</script>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      const dots = document.getElementsByClassName("dot");
+
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+
+      slideIndex++;
+
+      if (slideIndex > slides.length) {
+          slideIndex = 1;
+      }
+
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+
+      setTimeout(showSlides, 2000); // Change slide every 2 seconds
+  }
+</script>
+<script>
+    document.getElementById('bookButton').addEventListener('click', function() {
+        const searchBox = document.getElementById('searchBox');
+        if (searchBox) {
+            searchBox.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+</script>
+<script>
+  document.getElementById('packagesButton').addEventListener('click', function() {
+      const hamzascardsSection = document.getElementById('hamzascardsSection');
+      if (hamzascardsSection) {
+          hamzascardsSection.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+</script>
+<script>
+  document.getElementById('loungesButton').addEventListener('click', function() {
+      const businessloungesSection = document.getElementById('businessloungesSection');
+      if (businessloungesSection) {
+          businessloungesSection.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+</script>
+<script>
+  document.getElementById('discountButton').addEventListener('click', function() {
+      const backgroundstuSection = document.getElementById('backgroundstuSection');
+      if (backgroundstuSection) {
+          backgroundstuSection.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+</script>
+<script>
+  document.getElementById('helpButton').addEventListener('click', function() {
+      const footerSection = document.getElementById('footerSection');
+      if (footerSection) {
+          footerSection.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+</script>
+
